@@ -1,0 +1,42 @@
+{
+  "r.alwaysUseActiveTerminal": false,
+  "r.plot.useHttpgd": true,
+  // R setup
+  "r.sessionWatcher": true,
+  "[r]": {
+    "editor.defaultFormatter": "REditorSupport.r",
+    "editor.formatOnSave": true,
+    "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?" // Treat names.like.this as one word for selection
+  },
+  "[rmd]": {
+    "editor.defaultFormatter": "REditorSupport.r",
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    // required
+    "*.rmd": "markdown",
+    "*.Rmd": "rmd"
+  },
+  "r.session.viewers.viewColumn": {
+    "plot": "Three",
+    "browser": "Three",
+    "viewer": "Three",
+    "pageViewer": "Three",
+    "view": "Three",
+    "helpPanel": "Three"
+  },
+  // VSCode setup
+  "editor.formatOnPaste": true, // recommended
+  "editor.formatOnType": true, // recommended
+  "editor.formatOnSave": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.autoSave": "off",
+  "vim.smartRelativeLine": true,
+  "r.lsp.debug": true,
+  "r.bracketedPaste": true,
+  "r.lsp.promptToInstall": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none"
+}

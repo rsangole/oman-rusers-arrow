@@ -1,0 +1,3 @@
+docker/renv/activate.R
+docker/renv/settings.json
+docker/.Rprofile
