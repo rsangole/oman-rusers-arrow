@@ -1,7 +1,6 @@
 {
-  "r.alwaysUseActiveTerminal": false,
+  "r.alwaysUseActiveTerminal": true,
   "r.plot.useHttpgd": true,
-  // R setup
   "r.sessionWatcher": true,
   "[r]": {
     "editor.defaultFormatter": "REditorSupport.r",
@@ -32,8 +31,10 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "files.autoSave": "off",
   "vim.smartRelativeLine": true,
-  "r.lsp.debug": true,
-  "r.bracketedPaste": true,
+  "r.lsp.debug": false,
+  "r.rterm.linux": "/usr/local/bin/radian",
+  // "r.rterm.mac": "/Users/rsangole/mambaforge/envs/kaggle/bin/radian",
+  "r.bracketedPaste": false,
   "r.lsp.promptToInstall": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"

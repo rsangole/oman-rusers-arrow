@@ -1,3 +1,6 @@
 docker/renv/activate.R
 docker/renv/settings.json
 docker/.Rprofile
+.Rproj.user
+data/
+/.DS_Store

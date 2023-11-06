@@ -4,15 +4,16 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "REditorSupport.r",
-        "RDebugger.r-debugger",
-        "vscodevim.vim",
-        "GitHub.copilot",
-        "esbenp.prettier-vscode",
-        "yzhang.markdown-all-in-one",
-        "quarto.quarto",
-        "ms-azuretools.vscode-docker"
-      ]
+		"REditorSupport.r",
+		"RDebugger.r-debugger",
+		"vscodevim.vim",
+		"GitHub.copilot",
+		"esbenp.prettier-vscode",
+		"yzhang.markdown-all-in-one",
+		"quarto.quarto",
+		"ms-azuretools.vscode-docker",
+		"Mikhail-Arkhipov.r"
+	]
     }
   }
 }

@@ -25,5 +25,6 @@ RUN TEMP_QUARTO="$(mktemp)" && \
   sudo dpkg -i "$TEMP_QUARTO" && \
   rm -f "$TEMP_QUARTO"
 
+RUN R -e "renv::install(c('languageserver','here'))"
 
 # https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-arm64.deb

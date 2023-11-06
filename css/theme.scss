@@ -1,0 +1,40 @@
+/*-- scss:defaults --*/
+
+$presentation-h2-font-size: 1.2em;
+$presentation-h3-font-size: 1.0em;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+    border-left: 3px solid $text-muted;
+    padding-left: 0.5em;
+}
+
+.reveal h1 {
+    color: rgb(109, 62, 0);
+    font-size: 3em !important;
+}
+
+.reveal h2 {
+    color: rgb(109, 62, 0);
+}
+
+.reveal h3 {
+    color: rgb(109, 62, 0);
+}
+
+.reveal code {
+    color: #75AADB;
+    font-size: .85em !important;
+}
+
+.reveal .footer {
+    display: block;
+    position: fixed;
+    bottom: 14px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 18px;
+    z-index: 2;
+}
