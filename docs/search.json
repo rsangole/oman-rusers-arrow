@@ -63,11 +63,11 @@
     "text": "/arrow/R package\n\nThe arrow R package exposes an interface to the Arrow C++ library, enabling access to many of its features in R\n\n\n\nRead and write\n\nParquet files, an efficient and widely used columnar format\nCSV files with excellent speed and efficiency\nMulti-file and larger-than-memory datasets\nRead JSON files\n\n\nData analysis - Analyze larger-than-memory datasets - Manipulate Arrow data with dplyr verbs\n\n\n\n\nRef: https://arrow.apache.org/docs/r/index.html"
   },
   {
-    "objectID": "presentation.html#data",
-    "href": "presentation.html#data",
+    "objectID": "presentation.html#large-data",
+    "href": "presentation.html#large-data",
     "title": "Unlocking Big Data in R  Using Arrow",
-    "section": "/data",
-    "text": "/data\nNew York City Taxi and Limousine Commission\n\n\n\n🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page\n\n“Yellow and green taxi trip records … pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, …, passenger counts.”\nSIZE…\nDIMENSION…."
+    "section": "/large data",
+    "text": "/large data\n\n\n\n\n\nNew York City Taxi\n\nYellow and green taxi trip records… pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, passenger counts…\n\n\nSize : 40 GB on Disk\nDimensions : 1,150,352,666 rows x 24 cols!\n\n\n\n\n🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page"
   },
   {
     "objectID": "presentation.html#performanceparquet",

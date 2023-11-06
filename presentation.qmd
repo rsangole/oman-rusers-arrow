@@ -19,7 +19,6 @@ format:
         code-line-numbers: true
         toc: false
         echo: true
-        # page-layout: custom
 ---
 
 ## /whoami
@@ -151,25 +150,32 @@ _Ref: https://arrow.apache.org/docs/r/index.html_
 :::
 
 
-## /data
-
-New York City Taxi and Limousine Commission
+## /large data
 
 ::: columns
-::: {.column width="40%"}
-![](images/nyc.jpg){width="100%"}
+::: {.column width="50%"}
+![](images/nyc.jpg)
+:::
 
+::: {.column width="50%"}
+<br>
+
+#### New York City Taxi
+
+> Yellow and green taxi trip records... pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, passenger counts...
+
+<br>
+
+**Size** : 40 GB on Disk
+
+**Dimensions** : 1,150,352,666 rows x 24 cols!
+
+:::
+:::aside
 🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 :::
-
-::: {.column width="60%"}
-"Yellow and green taxi trip records ... pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, ..., passenger counts."
-
-SIZE...
-
-DIMENSION....
 :::
-:::
+
 
 <!-- ## /arrow/basics
 
