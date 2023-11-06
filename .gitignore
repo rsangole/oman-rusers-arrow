@@ -4,3 +4,5 @@ docker/.Rprofile
 .Rproj.user
 data/
 /.DS_Store
+
+/.quarto/

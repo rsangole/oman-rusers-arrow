@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "presentation.html#whoami",
+    "href": "presentation.html#whoami",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/whoami",
+    "text": "/whoami\n\n\nData Scientist, Mechanical Engineer\nTime Series, Anomaly Detection\nR Packages\nShiny\nML Ops, Docker\n\n\ngithub: rsangole"
+  },
+  {
+    "objectID": "presentation.html#motivation",
+    "href": "presentation.html#motivation",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/motivation",
+    "text": "/motivation\n\n\nDo you have data larger than your memory?\nAre your existing data transformation pipelines slow?\nDo you wish you had a more performant toolkit for data exploration?\nWish you could do this without learning a new paradigm?"
+  },
+  {
+    "objectID": "presentation.html#my-journey",
+    "href": "presentation.html#my-journey",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/my journey",
+    "text": "/my journey"
+  },
+  {
+    "objectID": "presentation.html#my-journey-1",
+    "href": "presentation.html#my-journey-1",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/my journey",
+    "text": "/my journey"
+  },
+  {
+    "objectID": "presentation.html#my-journey-2",
+    "href": "presentation.html#my-journey-2",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/my journey",
+    "text": "/my journey"
+  },
+  {
+    "objectID": "presentation.html#my-journey-3",
+    "href": "presentation.html#my-journey-3",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/my journey",
+    "text": "/my journey"
+  },
+  {
+    "objectID": "presentation.html#arrowwhat-is-it",
+    "href": "presentation.html#arrowwhat-is-it",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/arrow/what is it",
+    "text": "/arrow/what is it\n\n\n\n\n\n\n\nLanguage-independent (C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)\nColumnar memory format\nFor flat and hierarchical data\nOrganized for efficient analytic operations\nSupports zero-copy reads for lightning-fast data access\n\n\n\n\n\n\nRef: https://arrow.apache.org, first released in 2017"
+  },
+  {
+    "objectID": "presentation.html#arrowadvantages",
+    "href": "presentation.html#arrowadvantages",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/arrow/advantages",
+    "text": "/arrow/advantages\n\n\n\n\n\n\nFast Columnar Format\nArrow Format Standardization\n\n\n\n\n\nRef: https://arrow.apache.org/overview/"
+  },
+  {
+    "objectID": "presentation.html#arrowr-package",
+    "href": "presentation.html#arrowr-package",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/arrow/R package",
+    "text": "/arrow/R package\n\nThe arrow R package exposes an interface to the Arrow C++ library, enabling access to many of its features in R\n\n\n\nRead and write\n\nParquet files, an efficient and widely used columnar format\nCSV files with excellent speed and efficiency\nMulti-file and larger-than-memory datasets\nRead JSON files\n\n\nData analysis - Analyze larger-than-memory datasets - Manipulate Arrow data with dplyr verbs\n\n\n\n\nRef: https://arrow.apache.org/docs/r/index.html"
+  },
+  {
+    "objectID": "presentation.html#data",
+    "href": "presentation.html#data",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/data",
+    "text": "/data\nNew York City Taxi and Limousine Commission\n\n\n\n🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page\n\n“Yellow and green taxi trip records … pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, …, passenger counts.”\nSIZE…\nDIMENSION…."
+  },
+  {
+    "objectID": "presentation.html#performanceparquet",
+    "href": "presentation.html#performanceparquet",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/performance/parquet",
+    "text": "/performance/parquet"
+  },
+  {
+    "objectID": "presentation.html#performancepartitions",
+    "href": "presentation.html#performancepartitions",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/performance/partitions",
+    "text": "/performance/partitions"
+  },
+  {
+    "objectID": "presentation.html#technicalsetl-pipelines",
+    "href": "presentation.html#technicalsetl-pipelines",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/technicals/etl pipelines",
+    "text": "/technicals/etl pipelines"
+  },
+  {
+    "objectID": "presentation.html#wrap-up",
+    "href": "presentation.html#wrap-up",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/wrap up",
+    "text": "/wrap up\n\n\n\n\n\n\nAdopt an {arrow} first approach to data transformation\nUse partitioned parquet files for performance\nSimplify your complex pipelines\nUse self documenting function names"
+  },
+  {
+    "objectID": "presentation.html#ack",
+    "href": "presentation.html#ack",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/ack",
+    "text": "/ack\n\n🔗 Arrow R Package\n🔗 Posit Conf 2023 2-Day Workshop\n🔗 Apache Arrow"
+  }
+]
