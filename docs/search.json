@@ -11,7 +11,7 @@
     "href": "presentation.html#motivation",
     "title": "Unlocking Big Data in R  Using Arrow",
     "section": "/motivation",
-    "text": "/motivation\n\n\nDo you have data larger than your memory?\nAre your existing data transformation pipelines slow?\nDo you wish you had a more performant toolkit for data exploration?\nWish you could do this without learning a new paradigm?"
+    "text": "/motivation\n\nData larger than memory?\nData transformation pipelines slow?"
   },
   {
     "objectID": "presentation.html#my-journey",

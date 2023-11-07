@@ -37,15 +37,10 @@ github: `rsangole`
 
 ## /motivation
 
-<br>
+-  Data larger than memory?
+-  Data transformation pipelines slow?
 
-
--  Do you have data larger than your memory?
--  Are your existing data transformation pipelines slow?
--  Do you wish you had a more performant toolkit for data exploration?
--  Wish you could do this without learning a new paradigm?
-
-<!-- ![](images/dalle-brain.png){fig-align="center"} -->
+![](images/batman.jpg){fig-align='center'}
 
 ## /my journey
 
@@ -78,6 +73,7 @@ github: `rsangole`
 <br>
 
 ![](images/p3.png)
+
 
 ## /arrow/what is it
 
@@ -189,6 +185,8 @@ _Ref: https://posit-conf-2023.github.io/arrow/materials/2_data_manipulation_1.ht
 :::
 
 # lets::code()
+
+(mention caveats)
 
 ## /duckdb + arrow
 
