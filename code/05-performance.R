@@ -1,3 +1,5 @@
+# (Slide review)
+
 # CSV v Parquet file format ----
 
 # Num Rows: 6.3M Rows

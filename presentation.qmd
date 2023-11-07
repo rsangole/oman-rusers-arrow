@@ -89,13 +89,14 @@ github: `rsangole`
 ::: {.column width="60%"}
 <br>
 
-:::{.incremental}
+
+<!-- :::{.incremental} -->
 -   Language-independent _(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)_
 -   Columnar memory format
 -   For flat and hierarchical data
 -   Organized for efficient analytic operations
 -   Supports zero-copy reads for lightning-fast data access
-:::
+<!-- ::: -->
 :::
 :::
 
@@ -103,6 +104,8 @@ github: `rsangole`
 :::aside
 _Ref: https://arrow.apache.org, first released in 2017_
 :::
+
+
 
 ## /arrow/advantages
 
@@ -139,6 +142,7 @@ _Ref: https://arrow.apache.org/overview/_
 
 ::: {.column width="50%"}
 **Data analysis**
+
 - Analyze larger-than-memory datasets
 - Manipulate Arrow data with dplyr verbs
 
@@ -176,7 +180,7 @@ _Ref: https://posit-conf-2023.github.io/arrow/materials/2_data_manipulation_1.ht
 
 **Size** : 40 GB on Disk
 
-**Dimensions** : 1,150,352,666 rows x 24 cols!
+**Dimensions** : 1.15 B rows x 24 cols!
 
 :::
 :::aside
@@ -184,7 +188,7 @@ _Ref: https://posit-conf-2023.github.io/arrow/materials/2_data_manipulation_1.ht
 :::
 :::
 
-
+# lets::code()
 
 ## /duckdb + arrow
 
@@ -205,36 +209,42 @@ _Ref: https://parquet.apache.org_
 > Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language.
 
 
-## /wrap up
+## /to sum up
 
 <br>
 
 ::: columns
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="40%"}
+
+1. Adopt `{arrow} & {dplyr}` for your large data
+2. Use partitioned `parquet` files instead of CSV files
+3. Explore `{duckdb}`
+
+:::
+
 ::: {.column width="50%"}
 
 ![](images/85177c.jpg)
 
 :::
 
-::: {.column width="50%"}
-1. Adopt an `{arrow}` first approach to data transformation
-2. Use partitioned `parquet` files for performance 
-3. Simplify your complex pipelines 
-4. Use self documenting function names
-
-
-:::
 :::
 
-## /ack
+## /further reading
 
-<br>
+::: {layout-ncol=2}
 
-🔗 [Arrow R Package](https://arrow.apache.org/docs/r/index.html)
+![Cookbook](images/cookbook.jpg){width=400}
 
-🔗 [Posit Conf 2023 2-Day Workshop](https://posit-conf-2023.github.io/arrow/)
+![2 Day Workshop](images/arrow-conf.jpg){width=400}
 
-🔗 [Apache Arrow](https://arrow.apache.org)
+![R Package Docs](images/arrow-r.jpg){width=400}
+
+:::
 
 # شكراً
 

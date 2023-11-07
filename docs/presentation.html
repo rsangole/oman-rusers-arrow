@@ -407,15 +407,14 @@ Rahul S
 <p><img data-src="images/arrow_logo.png"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<div>
+<!-- :::{.incremental} -->
 <ul>
-<li class="fragment">Language-independent <em>(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, &amp; Rust)</em></li>
-<li class="fragment">Columnar memory format</li>
-<li class="fragment">For flat and hierarchical data</li>
-<li class="fragment">Organized for efficient analytic operations</li>
-<li class="fragment">Supports zero-copy reads for lightning-fast data access</li>
+<li>Language-independent <em>(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, &amp; Rust)</em></li>
+<li>Columnar memory format</li>
+<li>For flat and hierarchical data</li>
+<li>Organized for efficient analytic operations</li>
+<li>Supports zero-copy reads for lightning-fast data access <!-- ::: --></li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -454,7 +453,11 @@ Rahul S
 <li>Read JSON files</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><strong>Data analysis</strong> - Analyze larger-than-memory datasets - Manipulate Arrow data with dplyr verbs</p>
+<p><strong>Data analysis</strong></p>
+<ul>
+<li>Analyze larger-than-memory datasets</li>
+<li>Manipulate Arrow data with dplyr verbs</li>
+</ul>
 </div>
 </div>
 
@@ -485,12 +488,17 @@ Rahul S
 </blockquote>
 <p><br></p>
 <p><strong>Size</strong> : 40 GB on Disk</p>
-<p><strong>Dimensions</strong> : 1,150,352,666 rows x 24 cols!</p>
+<p><strong>Dimensions</strong> : 1.15 B rows x 24 cols!</p>
 </div>
 </div>
 <aside><div>
 <p>🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page</p>
 </div></aside></section>
+<section>
+<section id="letscode" class="title-slide slide level1 center">
+<h1>lets::code()</h1>
+
+</section>
 <section id="duckdb-arrow" class="slide level2">
 <h2>/duckdb + arrow</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -511,29 +519,56 @@ Rahul S
 <p>Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language.</p>
 </blockquote>
 </section>
-<section id="wrap-up" class="slide level2">
-<h2>/wrap up</h2>
+<section id="to-sum-up" class="slide level2">
+<h2>/to sum up</h2>
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/85177c.jpg"></p>
-</div><div class="column" style="width:50%;">
+<div class="column" style="width:1%;">
+
+</div><div class="column" style="width:40%;">
 <ol type="1">
-<li>Adopt an <code>{arrow}</code> first approach to data transformation</li>
-<li>Use partitioned <code>parquet</code> files for performance</li>
-<li>Simplify your complex pipelines</li>
-<li>Use self documenting function names</li>
+<li>Adopt <code>{arrow} &amp; {dplyr}</code> for your large data</li>
+<li>Use partitioned <code>parquet</code> files instead of CSV files</li>
+<li>Explore <code>{duckdb}</code></li>
 </ol>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/85177c.jpg"></p>
 </div>
 </div>
 </section>
-<section id="ack" class="slide level2">
-<h2>/ack</h2>
-<p><br></p>
-<p>🔗 <a href="https://arrow.apache.org/docs/r/index.html">Arrow R Package</a></p>
-<p>🔗 <a href="https://posit-conf-2023.github.io/arrow/">Posit Conf 2023 2-Day Workshop</a></p>
-<p>🔗 <a href="https://arrow.apache.org">Apache Arrow</a></p>
-</section>
+<section id="further-reading" class="slide level2">
+<h2>/further reading</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cookbook.jpg" width="400"></p>
+<figcaption>Cookbook</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arrow-conf.jpg" width="400"></p>
+<figcaption>2 Day Workshop</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arrow-r.jpg" width="400"></p>
+<figcaption>R Package Docs</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
 <section id="شكرا" class="title-slide slide level1 center">
 <h1>شكراً</h1>
 <p><br></p>

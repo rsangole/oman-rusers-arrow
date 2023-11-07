@@ -46,7 +46,7 @@
     "href": "presentation.html#arrowwhat-is-it",
     "title": "Unlocking Big Data in R  Using Arrow",
     "section": "/arrow/what is it",
-    "text": "/arrow/what is it\n\n\n\n\n\n\n\nLanguage-independent (C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)\nColumnar memory format\nFor flat and hierarchical data\nOrganized for efficient analytic operations\nSupports zero-copy reads for lightning-fast data access\n\n\n\n\n\n\nRef: https://arrow.apache.org, first released in 2017"
+    "text": "/arrow/what is it\n\n\n\n\n\n\n\nLanguage-independent (C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)\nColumnar memory format\nFor flat and hierarchical data\nOrganized for efficient analytic operations\nSupports zero-copy reads for lightning-fast data access \n\n\n\n\n\nRef: https://arrow.apache.org, first released in 2017"
   },
   {
     "objectID": "presentation.html#arrowadvantages",
@@ -60,7 +60,7 @@
     "href": "presentation.html#arrowr-package",
     "title": "Unlocking Big Data in R  Using Arrow",
     "section": "/arrow/R package",
-    "text": "/arrow/R package\n\nThe arrow R package exposes an interface to the Arrow C++ library, enabling access to many of its features in R\n\n\n\nRead and write\n\nParquet files, an efficient and widely used columnar format\nCSV files with excellent speed and efficiency\nMulti-file and larger-than-memory datasets\nRead JSON files\n\n\nData analysis - Analyze larger-than-memory datasets - Manipulate Arrow data with dplyr verbs\n\n\n\n\nRef: https://arrow.apache.org/docs/r/index.html"
+    "text": "/arrow/R package\n\nThe arrow R package exposes an interface to the Arrow C++ library, enabling access to many of its features in R\n\n\n\nRead and write\n\nParquet files, an efficient and widely used columnar format\nCSV files with excellent speed and efficiency\nMulti-file and larger-than-memory datasets\nRead JSON files\n\n\nData analysis\n\nAnalyze larger-than-memory datasets\nManipulate Arrow data with dplyr verbs\n\n\n\n\n\nRef: https://arrow.apache.org/docs/r/index.html"
   },
   {
     "objectID": "presentation.html#arrowr-package-1",
@@ -74,7 +74,7 @@
     "href": "presentation.html#large-data",
     "title": "Unlocking Big Data in R  Using Arrow",
     "section": "/large data",
-    "text": "/large data\n\n\n\n\n\nNew York City Taxi\n\nYellow and green taxi trip records… pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, passenger counts…\n\n\nSize : 40 GB on Disk\nDimensions : 1,150,352,666 rows x 24 cols!\n\n\n\n🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page"
+    "text": "/large data\n\n\n\n\n\nNew York City Taxi\n\nYellow and green taxi trip records… pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, passenger counts…\n\n\nSize : 40 GB on Disk\nDimensions : 1.15 B rows x 24 cols!\n\n\n\n🔗 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page"
   },
   {
     "objectID": "presentation.html#duckdb-arrow",
@@ -91,31 +91,17 @@
     "text": "/performance/parquet\n\nRef: https://parquet.apache.org\n\n\nApache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language."
   },
   {
-    "objectID": "presentation.html#performancepartitions",
-    "href": "presentation.html#performancepartitions",
+    "objectID": "presentation.html#to-sum-up",
+    "href": "presentation.html#to-sum-up",
     "title": "Unlocking Big Data in R  Using Arrow",
-    "section": "/performance/partitions",
-    "text": "/performance/partitions"
+    "section": "/to sum up",
+    "text": "/to sum up\n\n\n\n\n\n\nAdopt {arrow} & {dplyr} for your large data\nUse partitioned parquet files instead of CSV files\nExplore {duckdb}"
   },
   {
-    "objectID": "presentation.html#technicalsetl-pipelines",
-    "href": "presentation.html#technicalsetl-pipelines",
+    "objectID": "presentation.html#further-reading",
+    "href": "presentation.html#further-reading",
     "title": "Unlocking Big Data in R  Using Arrow",
-    "section": "/technicals/etl pipelines",
-    "text": "/technicals/etl pipelines"
-  },
-  {
-    "objectID": "presentation.html#wrap-up",
-    "href": "presentation.html#wrap-up",
-    "title": "Unlocking Big Data in R  Using Arrow",
-    "section": "/wrap up",
-    "text": "/wrap up\n\n\n\n\n\n\nAdopt an {arrow} first approach to data transformation\nUse partitioned parquet files for performance\nSimplify your complex pipelines\nUse self documenting function names"
-  },
-  {
-    "objectID": "presentation.html#ack",
-    "href": "presentation.html#ack",
-    "title": "Unlocking Big Data in R  Using Arrow",
-    "section": "/ack",
-    "text": "/ack\n\n🔗 Arrow R Package\n🔗 Posit Conf 2023 2-Day Workshop\n🔗 Apache Arrow"
+    "section": "/further reading",
+    "text": "/further reading\n\n\n\n\n\n\nCookbook\n\n\n\n\n\n\n\n2 Day Workshop\n\n\n\n\n\n\n\n\n\nR Package Docs"
   }
 ]
