@@ -149,6 +149,14 @@ _Ref: https://arrow.apache.org/overview/_
 _Ref: https://arrow.apache.org/docs/r/index.html_
 :::
 
+## /arrow/R package
+
+![](images/dplyr-api.jpg){width=70% fig-align='center'}
+
+:::aside
+_Ref: https://posit-conf-2023.github.io/arrow/materials/2_data_manipulation_1.html#/dplyr-api-in-arrow_
+:::
+
 
 ## /large data
 
@@ -177,15 +185,25 @@ _Ref: https://arrow.apache.org/docs/r/index.html_
 :::
 
 
-<!-- ## /arrow/basics
 
-## /arrow/advanced usage -->
+## /duckdb + arrow
+
+![](images/duckdb-api.jpg){width=70% fig-align='center'}
+
+:::aside
+_Ref: https://posit-conf-2023.github.io/arrow/materials/2_data_manipulation_1.html#/duckdb_
+:::
 
 ## /performance/parquet
 
-## /performance/partitions
+![](images/parquet.jpg)
 
-## /technicals/etl pipelines
+_Ref: https://parquet.apache.org_
+
+<br>
+
+> Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language.
+
 
 ## /wrap up
 

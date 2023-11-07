@@ -1,8 +1,0 @@
-# parquet file format
-
-
-
-# partitioning
-
-
-

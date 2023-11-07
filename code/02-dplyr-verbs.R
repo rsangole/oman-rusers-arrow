@@ -24,10 +24,10 @@ tic()
 nyc |>
     filter(
         str_ends(vendor_name, "S"),
-        year %in% c(2020, 2021), 
+        year %in% c(2020, 2021),
         month == 9) |>
     collect()
-toc()xw
+toc()
 
 # Selecting columns by name ----
 nyc |>
@@ -37,7 +37,7 @@ nyc |>
     )
 
 # Selecting columns by type ----
-nyc |> 
+nyc |>
     select(
         where(is.character)
     )
@@ -56,6 +56,17 @@ nyc |>
     filter(year == 2019) |>
     mutate(tip_percentage = tip_amount / fare_amount * 100) |>
     select(fare_amount, tip_amount, tip_percentage) |>
+    head() |>
+    collect()
+toc()
+
+
+USD_TO_OMR <- 0.39
+tic()
+nyc |>
+    mutate(across(ends_with("amount"),
+                  list('omr' = ~.x * USD_TO_OMR))) |>
+    select(contains('amount')) |>
     head() |>
     collect()
 toc()
@@ -95,7 +106,8 @@ nyc |>
 toc()
 
 # Joins ----
-
+## What are the counts of rides for each pickup-dropoff
+## combination?
 nyc_taxi_zones <-
     read_csv_arrow(here::here("data/taxi_zone_lookup.csv")) |>
     select(location_id = LocationID,
@@ -126,78 +138,6 @@ toc()
 borough_counts
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# DuckDB
-## Window Functions
-
-fare_by_year |>
-    group_by(year) |>
-    to_duckdb() |>
-    mutate(mean_fare = mean(fare_amount)) |>
-    to_arrow() |>
-    arrange(desc(fare_amount)) |>
-    head() |>
-    collect()
-
-
-
-
-
-taxis_gbp <- nyc_taxi |>
-    mutate(across(ends_with("amount"), list(pounds = ~ .x * 0.79)))
-
-taxis_gbp
-
-
-taxis_gbp |>
-    select(contains("amount")) |>
-    head() |>
-    collect()
-
-# The arrow package contains methods for 37 dplyr table functions, many of which
-# are "verbs" that do transformations to one or more tables. The package also
-# has mappings of 211 R functions to the corresponding functions in the Arrow
-# compute library
-
-# slice
-long_rides_2021 <- nyc_taxi |>
-    filter(year == 2021 & trip_distance > 100) |>
-    select(pickup_datetime, year, trip_distance)
-
-long_rides_2021 |>
-    slice(1:3)
-
-
-long_rides_2021 |>
-    slice_max(n = 3, order_by = trip_distance, with_ties = FALSE) |>
-    collect()
-
-
-
-# functions within arrow
-nyc_taxi |>
-    mutate(vendor_name = na_if(vendor_name, "CMT")) |>
-    head() |>
-    collect()
-
+# nyc <- nyc |>
+#     left_join(pickup) |>
+#     left_join(dropoff)
