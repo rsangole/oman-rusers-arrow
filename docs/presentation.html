@@ -360,8 +360,14 @@ Rahul S
 <li>Data larger than memory?</li>
 <li>Data transformation pipelines slow?</li>
 </ul>
-
-<img data-src="images/batman.jpg" class="r-stretch quarto-figure-center"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/batman.jpg" style="width:45.0%"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="my-journey" class="slide level2">
 <h2>/my journey</h2>
 <p><br></p>
@@ -397,6 +403,18 @@ Rahul S
 <p><br></p>
 
 <img data-src="images/p3.png" class="r-stretch"></section>
+<section id="caveats" class="slide level2">
+<h2>/caveats</h2>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment">I’m assuming you know R</li>
+<li class="fragment">You’re familiar with <code>tidyverse</code>, particularly <code>dplyr</code></li>
+<li class="fragment">I’m <em>not</em> an subject matter expert, but a practitioner</li>
+<li class="fragment">Motivating examples &amp; fundamentals</li>
+</ul>
+</div>
+</section>
 <section id="arrowwhat-is-it" class="slide level2">
 <h2>/arrow/what is it</h2>
 <div class="columns">
@@ -404,13 +422,11 @@ Rahul S
 <p><img data-src="images/arrow_logo.png"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<!-- :::{.incremental} -->
 <ul>
-<li>Language-independent <em>(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, &amp; Rust)</em></li>
 <li>Columnar memory format</li>
 <li>For flat and hierarchical data</li>
 <li>Organized for efficient analytic operations</li>
-<li>Supports zero-copy reads for lightning-fast data access <!-- ::: --></li>
+<li>Language-independent <em>(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, &amp; Rust)</em></li>
 </ul>
 </div>
 </div>
@@ -494,7 +510,7 @@ Rahul S
 <section>
 <section id="letscode" class="title-slide slide level1 center">
 <h1>lets::code()</h1>
-<p>(mention caveats)</p>
+
 </section>
 <section id="duckdb-arrow" class="slide level2">
 <h2>/duckdb + arrow</h2>
@@ -516,23 +532,25 @@ Rahul S
 <p>Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language.</p>
 </blockquote>
 </section>
-<section id="to-sum-up" class="slide level2">
-<h2>/to sum up</h2>
+<section id="recap" class="slide level2">
+<h2>/recap</h2>
 <p><br></p>
-<div class="columns">
-<div class="column" style="width:1%;">
-
-</div><div class="column" style="width:40%;">
-<ol type="1">
-<li>Adopt <code>{arrow} &amp; {dplyr}</code> for your large data</li>
-<li>Use partitioned <code>parquet</code> files instead of CSV files</li>
-<li>Explore <code>{duckdb}</code></li>
-</ol>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/85177c.jpg"></p>
-</div>
+<div>
+<ul>
+<li class="fragment"><code>arrow</code> evaluates lazily by default</li>
+<li class="fragment">execution only runs on <code>collect()</code></li>
+<li class="fragment"><code>{dplyr}</code> verbs, <code>filter</code>, <code>select</code>, <code>mutate</code>, <code>join</code>, <code>distinct</code>, <code>group_by</code> + <code>summarize</code>, and <code>across</code></li>
+<li class="fragment"><code>to_duckdb()</code> saves the day for pivoting and window functions</li>
+<li class="fragment"><code>register_scalar_function</code> can be used to create UDFs</li>
+<li class="fragment">massive performance gains using parquet files and smart partitioning</li>
+</ul>
 </div>
 </section>
+<section id="i-hope" class="slide level2">
+<h2>/i hope</h2>
+<p><br></p>
+
+<img data-src="images/85177c.jpg" class="r-stretch quarto-figure-center"></section>
 <section id="further-reading" class="slide level2">
 <h2>/further reading</h2>
 <div class="quarto-layout-panel">

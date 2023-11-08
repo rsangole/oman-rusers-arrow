@@ -9,8 +9,10 @@ class(query)
 schema(query)
 
 # Collecting results ----
+tic()
 query |>
-    collect()
+    collect() # execute the query!
+toc()
 
 # Example of head() ----
 nyc |>
@@ -46,21 +48,27 @@ nyc |>
 tic()
 nyc |>
     distinct(year, month) |>
-    arrange(year, month) |>
+    arrange(year, -month) |>
+    collect()
+toc()
+
+tic()
+nyc |>
+    distinct(vendor_name) |>
     collect()
 toc()
 
 # Mutating columns ----
+## Simple mutation ----
 tic()
 nyc |>
     filter(year == 2019) |>
     mutate(tip_percentage = tip_amount / fare_amount * 100) |>
     select(fare_amount, tip_amount, tip_percentage) |>
-    head() |>
     collect()
 toc()
 
-
+## Using across ----
 USD_TO_OMR <- 0.39
 tic()
 nyc |>
@@ -106,13 +114,14 @@ nyc |>
 toc()
 
 # Joins ----
-## What are the counts of rides for each pickup-dropoff
-## combination?
+## What are the counts of rides for each pickup-dropoff combination? ----
 nyc_taxi_zones <-
     read_csv_arrow(here::here("data/taxi_zone_lookup.csv")) |>
     select(location_id = LocationID,
            borough = Borough)
 nyc_taxi_zones
+
+# borough := a district
 
 nyc_taxi_zones_arrow <- arrow_table(
     nyc_taxi_zones,
@@ -137,7 +146,23 @@ borough_counts <- nyc |>
 toc()
 borough_counts
 
-
-# nyc <- nyc |>
-#     left_join(pickup) |>
-#     left_join(dropoff)
+# solution ----
+#
+# 91.747 sec elapsed
+#
+# > borough_counts
+# # A tibble: 50 × 3
+# pickup_borough dropoff_borough         n
+# <chr>          <chr>               <int>
+#     1 NA             NA              732357953
+# 2 Manhattan      Manhattan       351198872
+# 3 Queens         Manhattan        14440705
+# 4 Manhattan      Queens           13052517
+# 5 Manhattan      Brooklyn         11180867
+# 6 Queens         Queens            7440356
+# 7 Unknown        Unknown           4491811
+# 8 Queens         Brooklyn          3662324
+# 9 Brooklyn       Brooklyn          3550480
+# 10 Manhattan      Bronx             2071830
+# # ℹ 40 more rows
+# # ℹ Use `print(n = ...)` to see more rows

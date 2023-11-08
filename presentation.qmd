@@ -40,7 +40,9 @@ github: `rsangole`
 -  Data larger than memory?
 -  Data transformation pipelines slow?
 
-![](images/batman.jpg){fig-align='center'}
+. . . 
+
+![](images/batman.jpg){fig-align='center' width=45%}
 
 ## /my journey
 
@@ -75,6 +77,19 @@ github: `rsangole`
 ![](images/p3.png)
 
 
+## /caveats
+
+<br>
+
+:::{.incremental}
+
+- I'm assuming you know R
+- You're familiar with `tidyverse`, particularly `dplyr`
+- I'm _not_ an subject matter expert, but a practitioner
+- Motivating examples & fundamentals
+
+:::
+
 ## /arrow/what is it
 
 ::: columns
@@ -85,14 +100,11 @@ github: `rsangole`
 ::: {.column width="60%"}
 <br>
 
-
-<!-- :::{.incremental} -->
--   Language-independent _(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)_
 -   Columnar memory format
 -   For flat and hierarchical data
 -   Organized for efficient analytic operations
--   Supports zero-copy reads for lightning-fast data access
-<!-- ::: -->
+-   Language-independent _(C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)_
+
 :::
 :::
 
@@ -186,8 +198,6 @@ _Ref: https://posit-conf-2023.github.io/arrow/materials/2_data_manipulation_1.ht
 
 # lets::code()
 
-(mention caveats)
-
 ## /duckdb + arrow
 
 ![](images/duckdb-api.jpg){width=70% fig-align='center'}
@@ -206,31 +216,27 @@ _Ref: https://parquet.apache.org_
 
 > Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language.
 
-
-## /to sum up
+## /recap
 
 <br>
 
-::: columns
+:::{.incremental}
 
-::: {.column width="1%"}
-:::
-
-::: {.column width="40%"}
-
-1. Adopt `{arrow} & {dplyr}` for your large data
-2. Use partitioned `parquet` files instead of CSV files
-3. Explore `{duckdb}`
+- `arrow` evaluates lazily by default
+- execution only runs on `collect()`
+- `{dplyr}` verbs, `filter`, `select`, `mutate`, `join`, `distinct`,  `group_by` + `summarize`, and `across`
+- `to_duckdb()` saves the day for pivoting and window functions
+- `register_scalar_function` can be used to create UDFs
+- massive performance gains using parquet files and smart partitioning
 
 :::
 
-::: {.column width="50%"}
+## /i hope
 
-![](images/85177c.jpg)
+<br>
 
-:::
+![](images/85177c.jpg){fig-align='center'}
 
-:::
 
 ## /further reading
 

@@ -2,7 +2,7 @@
 
 # CSV v Parquet file format ----
 
-# Num Rows: 6.3M Rows
+# Airlines Dataset, Flights in 2021: 6.3M Rows
 
 ## CSV
 ## 2.21 GB
@@ -18,7 +18,7 @@ tic()
 open_dataset(sources = "data/airlines/Combined_Flights_2021.parquet") |>
     count(DestState) |>
     collect()
-toc()
+toc() #30x faster!
 
 
 tic()
@@ -34,13 +34,13 @@ open_dataset(sources = "data/airlines/Combined_Flights_2021.parquet") |>
     group_by(DestState) |>
     summarise(mean(Distance)) |>
     collect()
-toc()
+toc() #30x faster!
 
 # partitioning ----
 
-years <- nyc |> distinct(year) |> collect() |> pull()
-years
-
+# to create the vendor partitioned dataset... ----
+# years <- nyc |> distinct(year) |> collect() |> pull()
+# years
 # for(.y in years){
 #     nyc |>
 #         filter(year == .y) |>
@@ -48,25 +48,10 @@ years
 #         write_dataset("data/nyc_part_vendor")
 # }
 
+# connect to vendor partitioned data ----
 nyc_vend <- open_dataset("data/nyc_part_vendor/")
 
-## Examples where a partition won't matter/make things worse ----
-# 1....
-tic()
-nyc |>
-    group_by(year, month, vendor_name) |>
-    summarise(max_trip_dist = max(trip_distance)) |>
-    collect()
-toc()
-
-tic()
-nyc_vend |>
-    group_by(year, month, vendor_name) |>
-    summarise(max_trip_dist = max(trip_distance)) |>
-    collect()
-toc()
-
-# 2...
+## Example where a partition won't matter/make things worse ----
 tic()
 nyc |>
     filter(rate_code == 'Newark') |>
@@ -81,8 +66,7 @@ nyc_vend |>
     collect()
 toc()
 
-## Examples where a partition will matter ----
-# 1...
+## Example where a partition will matter ----
 tic()
 nyc |>
     filter(vendor_name == "CMT") |>
@@ -97,21 +81,7 @@ nyc_vend |>
     group_by(year, month, vendor_name) |>
     summarise(max_trip_dist = max(trip_distance)) |>
     collect()
-toc()
+toc() # 2x gain
 
-# 2...
-tic()
-nyc |>
-    filter(vendor_name == 'VTS') |>
-    group_by(year) |>
-    summarize(mean(tip_amount)) |>
-    collect()
-toc()
 
-tic()
-nyc_vend |>
-    filter(vendor_name == 'VTS') |>
-    group_by(year) |>
-    summarize(mean(tip_amount)) |>
-    collect()
-toc()
+## {head to recap}

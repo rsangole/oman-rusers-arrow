@@ -1,6 +1,7 @@
 # Using Custom Functions within arrow ----
 
-## UDF - Clean up strings ----
+## User Defined Function
+## Clean up strings ----
 register_scalar_function(
 
     # What should we call the function?
@@ -22,9 +23,10 @@ register_scalar_function(
 )
 
 ## Solution ----
+tic()
 nyc |>
     filter(year == 2019, month == 1) |>
     mutate(clean_rate_code = clean_me(rate_code)) |>
     select(contains('rate_code')) |>
-    # head() |>
     collect()
+toc()

@@ -13,7 +13,7 @@ nyc |>
 nyc |>
     group_by(rate_code) |>
     summarise(max_trip_dist = max(trip_distance)) |>
-    pivot_wider(-rate_code)
+    pivot_wider(names_from = 'rate_code', values_from = 'max_trip_dist')
 
 # [B] Solution ----
 library(duckdb)
@@ -36,15 +36,16 @@ nyc |>
 
 
 # [B] Solution ----
+tic()
 nyc |>
     filter(year > 2020) |>
     select(year, contains('amount')) |>
     group_by(year) |>
     to_duckdb() |>
     mutate(yearly_total_amt = sum(total_amount)) |>
-    head() |>
     to_arrow() |>
     collect()
+toc()
 
 # Sql Query ----
 

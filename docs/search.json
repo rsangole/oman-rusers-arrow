@@ -42,11 +42,18 @@
     "text": "/my journey"
   },
   {
+    "objectID": "presentation.html#caveats",
+    "href": "presentation.html#caveats",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/caveats",
+    "text": "/caveats\n\n\n\nI’m assuming you know R\nYou’re familiar with tidyverse, particularly dplyr\nI’m not an subject matter expert, but a practitioner\nMotivating examples & fundamentals"
+  },
+  {
     "objectID": "presentation.html#arrowwhat-is-it",
     "href": "presentation.html#arrowwhat-is-it",
     "title": "Unlocking Big Data in R  Using Arrow",
     "section": "/arrow/what is it",
-    "text": "/arrow/what is it\n\n\n\n\n\n\n\nLanguage-independent (C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)\nColumnar memory format\nFor flat and hierarchical data\nOrganized for efficient analytic operations\nSupports zero-copy reads for lightning-fast data access \n\n\n\n\n\nRef: https://arrow.apache.org, first released in 2017"
+    "text": "/arrow/what is it\n\n\n\n\n\n\nColumnar memory format\nFor flat and hierarchical data\nOrganized for efficient analytic operations\nLanguage-independent (C, C++, C#, Go, Java, JavaScript, Julia, MATLAB, Python, R, Ruby, & Rust)\n\n\n\n\n\nRef: https://arrow.apache.org, first released in 2017"
   },
   {
     "objectID": "presentation.html#arrowadvantages",
@@ -91,11 +98,18 @@
     "text": "/performance/parquet\n\nRef: https://parquet.apache.org\n\n\nApache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language."
   },
   {
-    "objectID": "presentation.html#to-sum-up",
-    "href": "presentation.html#to-sum-up",
+    "objectID": "presentation.html#recap",
+    "href": "presentation.html#recap",
     "title": "Unlocking Big Data in R  Using Arrow",
-    "section": "/to sum up",
-    "text": "/to sum up\n\n\n\n\n\n\nAdopt {arrow} & {dplyr} for your large data\nUse partitioned parquet files instead of CSV files\nExplore {duckdb}"
+    "section": "/recap",
+    "text": "/recap\n\n\n\narrow evaluates lazily by default\nexecution only runs on collect()\n{dplyr} verbs, filter, select, mutate, join, distinct, group_by + summarize, and across\nto_duckdb() saves the day for pivoting and window functions\nregister_scalar_function can be used to create UDFs\nmassive performance gains using parquet files and smart partitioning"
+  },
+  {
+    "objectID": "presentation.html#i-hope",
+    "href": "presentation.html#i-hope",
+    "title": "Unlocking Big Data in R  Using Arrow",
+    "section": "/i hope",
+    "text": "/i hope"
   },
   {
     "objectID": "presentation.html#further-reading",
