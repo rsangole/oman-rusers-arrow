@@ -22,10 +22,10 @@ nyc |> nrow()
 
 # my machine ----
 
-# 2021 MacBook Pro, running Sonoma 14.1
-# Apple M1 Pro
+# 2021 MacBook Pro
+# Apple M1 Pro, 10 cores
 # 16 GB RAM
 
 # R 4.3.2
-# {arrow}: 13.0.0.1
+# {arrow}: 13.0.0
 # {dplyr}: 1.1.3
